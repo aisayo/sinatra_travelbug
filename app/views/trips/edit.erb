@@ -1,0 +1,16 @@
+
+<h1>Update Trip</h1>
+<form action="/trips/<%=@trips.id%>" method="POST">
+  <label>Name:</label>
+
+  <input type="text" name="trip[name]" id="trip_name" value="<%=@trips.name%>">
+
+  <label>Mark as visited?</label>
+  <select name="Choose one">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+
+
+  <input type="submit" value="Update Trip">
+</form>
