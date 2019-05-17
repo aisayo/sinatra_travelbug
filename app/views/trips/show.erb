@@ -1,9 +1,17 @@
 <h1><%=@trips.name%></h1>
+Location: <%=@trips.location%>
+<br>
+Date: <%=@trips.date%>
+</br>
+<br>
+<p><a href="/trips/<%=@trips.id%>/edit">Edit Trip</a></p>
+</br>
 <a href="/home">Home</a>
-<% if @trips.user == current_user %>
-	<a href="/trips/<%=@trips.id%>/edit">Edit Trip</a>
-	<form action="/trips/<%=@trips.id%>" method="POST">
+<br>
+</br>
+<p><% if @trips.user == current_user %>
+<form action="/trips/<%=@trips.id%>" method="POST">
 		<input type="hidden" name="_method" value="delete">
 		<input type="submit" value="Delete Trip">
 	</form>
-<% end %>
+<% end %></p>

@@ -1,16 +1,17 @@
 
+<% if @trips.user != current_user %>
+  <% redirect "/trips/#{@trips.id}" %>
+<%end%>
 <h1>Update Trip</h1>
-<form action="/trips/<%=@trips.id%>" method="POST">
-  <label>Name:</label>
 
-  <input type="text" name="trip[name]" id="trip_name" value="<%=@trips.name%>">
+<form action="/trips/<%= @trips.id%>" method="POST">
+<input id="hidden" type="hidden" name="_method" value="PATCH">
 
-  <label>Mark as visited?</label>
-  <select name="Choose one">
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
+  <label>Change the Date?</label>
+  <input type="text" name="trip[date]" id="trip_date" value="<%=@trips.date%>">
 
-
+  <label>Change the Location?</label>
+  <input type="text" name="trip[location]" id="trip_location" value="<%=@trips.location%>">
 
   <input type="submit" value="Update Trip">
 </form>
