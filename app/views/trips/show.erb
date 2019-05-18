@@ -1,14 +1,29 @@
+<h3><a href="/home">Home</a></h3>
+  <style>
+    h3 {text-align: right;}
+  </style>
+
 <h1><%=@trips.name%></h1>
-Location: <%=@trips.location%>
+  <style>
+    h1 {font-size: 3em;}
+  </style>
+
+<h4>Location:</h4> <%=@trips.location%>
+<br></br>
+
+<h4>Date:</h4> <%=@trips.date%>
+<br></br>
+
+<h4><a href="/trips/<%=@trips.id%>/edit">Edit Trip</a></h4>
+  <style>
+    h4:link {background-color: yellow;}
+    a:visited {background-color: cyan;}
+    a:hover {background-color: lightgreen;}
+    a:active {background-color: hotpink;}
+</style>
 <br>
-Date: <%=@trips.date%>
 </br>
-<br>
-<p><a href="/trips/<%=@trips.id%>/edit">Edit Trip</a></p>
-</br>
-<a href="/home">Home</a>
-<br>
-</br>
+
 <p><% if @trips.user == current_user %>
 <form action="/trips/<%=@trips.id%>" method="POST">
 		<input type="hidden" name="_method" value="delete">

@@ -1,11 +1,20 @@
 
-
-
 <h1>Create a new trip!</h1>
+  <style>
+    h1{text-align: center;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      color: black
+      font-size: 5em;}
+  </style>
+<br></br>
 <form action="/trips" method="POST">
   <label>Name: </label><input type="text" name="name" id="trip_name">
   <label>Location: </label> <input type="text" name="location" id="trip_location">
   <label>Date: </label><input type="text" name="date" id="trip_date">
   <input type="submit" value="Create New Trip">
-
+    <style>
+      input[type=submit]{
+        -webkit-transition-duration: 1s;
+        transition-duration: 1s;}
+    </style>
 </form>

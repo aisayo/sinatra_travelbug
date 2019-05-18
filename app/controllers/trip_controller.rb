@@ -61,7 +61,7 @@ class TripController < ApplicationController
 		if current_user = @trips.user
 			@trips.destroy
 	  	redirect "/home"
-    end 
+    end
   end
 
 

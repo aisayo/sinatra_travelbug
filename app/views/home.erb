@@ -1,19 +1,37 @@
+<h4><a href="/logout">Logout</a></h4>
 
+<br></br>
+  <style>
+    h4{text-align: right;}
+    h4:link {background-color: yellow;}
+    a:visited {background-color: cyan;}
+    a:hover {background-color: lightgreen;}
+    a:active {background-color: hotpink;}
+  </style>
 
 <h1>Travelbug</h1>
+
 <style>
-h1 {
-  color: plum;
-  font-size: 3em;
+  h1{font-family: "Comic Sans MS", cursive, sans-serif;}
+  h1{color: black;
+  font-size: 4em;
   padding: 20px;
   border-style: double;
-}
+  border-color: plum}
+  h1{text-align: center }
 </style>
+<br></br>
 
-	<h2>Welcome, <%= current_user.email %>! <a href="/logout">Logout</a></h2>
-	<h3>Choose a trip to view more details or <a href="/trips/new">add</a> a new trip to your wish list!</h3>
-	<h3>Check out your trips:</h3>
-
-  <%@trips.each do |trip|%>
+<h2>Welcome, <%= current_user.email %>!</h2>
+  <style>
+    h2{font-family: "Comic Sans MS", cursive, sans-serif;}
+  </style>
+<h4><a href="/trips/new">New Trip</a></h4>
+<h3>Select a trip to view/edit details</h3>
+<h3>Check out your trips:</h3>
+    <style>
+      h3{font-family: "Comic Sans MS", cursive, sans-serif;font-size: 17px}
+    </style>
+<%@trips.each do |trip|%>
   		<li><a href="/trips/<%=trip.id%>"><%=trip.name%></a></li>
-  		<%end%>
+<%end%>
