@@ -13,15 +13,15 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: plum;
+    background-color: blue;
     color: #444;
     font-family: Sans-Serif;
     line-height: 18px;
   }
 
   .wrapper {
-    background: #dda;
-    -moz-box-shadow: 0 0 10px rgba(0,0,255,.3);
+    background: #fff;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
     margin: 16px auto;

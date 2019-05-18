@@ -1,4 +1,7 @@
-
+<body>
+  <style>
+    body {background-color: lightsteelblue;}
+  </style>
 <% if @trips.user != current_user %>
   <% redirect "/trips/#{@trips.id}" %>
 <%end%>
@@ -15,3 +18,4 @@
 
   <input type="submit" value="Update Trip">
 </form>
+</body>
